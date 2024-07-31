@@ -1,1 +1,2 @@
 # Front-end-Ramais
+This application is designed to simplify the process of locating the company's extensions and WhatsApp business accounts. The front-end is built using Vue.js, Vite, Quasar, HTML, and CSS. The back-end code is stored in a separate repository, which can be accessed at "Back-end-Ramais."
