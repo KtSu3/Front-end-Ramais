@@ -64,32 +64,32 @@ export default {
 
     const onSubmit = async () => {
       if (!formData.value.setor || !formData.value.colaborador || !formData.value.ramal || !formData.value.whatsapp) {
-        // $q.notify({
-        //   color: 'red-5',
-        //   textColor: 'white',
-        //   icon: 'warning',
-        //   message: 'Todos os campos são obrigatórios!'
-        // })
+        $q.notify({
+          color: 'red-5',
+          textColor: 'white',
+          icon: 'warning',
+          message: 'Todos os campos são obrigatórios!'
+        })
         return
       }
 
       try {
         await axios.post('http://ramaisapi.yukalinetelecom.com.br/api/ramais/', formData.value)
-        // $q.notify({
-        //   color: 'green-4',
-        //   textColor: 'white',
-        //   icon: 'cloud_done',
-        //   message: 'Colaborador registrado com sucesso!'
-        // })
+         $q.notify({
+           color: 'green-4',
+           textColor: 'white',
+           icon: 'cloud_done',
+           message: 'Colaborador registrado com sucesso!'
+         })
         onReset() // Limpar o formulário após o sucesso
       } catch (error) {
         console.error('Erro ao registrar colaborador:', error)
-        // $q.notify({
-        //   color: 'red-5',
-        //   textColor: 'white',
-        //   icon: 'error',
-        //   message: 'Erro ao registrar colaborador. Verifique o console para mais detalhes.'
-        // })
+         $q.notify({
+           color: 'red-5',
+           textColor: 'white',
+           icon: 'error',
+           message: 'Erro ao registrar colaborador. Verifique o console para mais detalhes.'
+         })
       }
     }
 

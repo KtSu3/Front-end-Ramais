@@ -1,5 +1,5 @@
 import './assets/main.css'
-import { Quasar } from 'quasar'
+import { Quasar, Notify } from 'quasar'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -14,8 +14,16 @@ const app = createApp(App)
 app.use(router)
 
 app.use(Quasar, {
+
   lang: langBR,
-  plugins: {},
+  plugins: {Notify},
+  
+  config: {
+    // notify: 
+    // dark:
+  },
+
+
 })
 
 
